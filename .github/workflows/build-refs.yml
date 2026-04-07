@@ -1,0 +1,24 @@
+name: Build Refs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'GoobBin/**'
+      - 'LoaderBin/**'
+  workflow_dispatch:
+
+jobs:
+  upload-refs:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload Goob-Station refs
+        uses: actions/upload-artifact@v4
+        with:
+          name: goob-station-refs
+          path: |
+            GoobBin/
+            LoaderBin/
+          retention-days: 90
