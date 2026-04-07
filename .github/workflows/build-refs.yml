@@ -21,6 +21,6 @@ jobs:
         with:
           name: goob-station-refs
           path: |
-            GoobBin/
-            LoaderBin/
+            refs/GoobBin/
+            refs/LoaderBin/
           retention-days: 90
