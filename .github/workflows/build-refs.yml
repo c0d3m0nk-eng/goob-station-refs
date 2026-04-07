@@ -13,6 +13,8 @@ jobs:
     runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Upload Goob-Station refs
         uses: actions/upload-artifact@v4
